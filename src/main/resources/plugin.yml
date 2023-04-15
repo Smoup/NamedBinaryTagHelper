@@ -1,0 +1,6 @@
+name: NamedBinaryTagHelper
+version: '${project.version}'
+main: main.nbth.NamedBinaryTagHelper
+api-version: 1.19
+authors: [Smoup]
+description: Allows you to quickly find out/change the NBT of the selected block using the right mouse button
