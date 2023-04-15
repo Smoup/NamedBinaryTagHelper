@@ -59,7 +59,7 @@ public class Commands implements CommandExecutor, TabCompleter {
                         container.set(NBTKey, PersistentDataType.STRING, value);
                         state.update();
                         sender.sendMessage(YELLOW + "NBT" + GRAY + " для выбранного блока под ключем "
-                                + YELLOW + key + GRAY + " значение установленно на : \n" +  WHITE + value);
+                                + YELLOW + key + GRAY + " значение установленно на: \n" +  WHITE + value);
                     } else {
                         sender.sendMessage("/nbt set [key] [value]");
                     }
