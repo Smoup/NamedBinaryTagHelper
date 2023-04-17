@@ -34,7 +34,7 @@ public class Commands implements CommandExecutor, TabCompleter {
                     if (args.length > 1) {
                         String key = args[1];
                         BlockState state = block.getState();
-                        PersistentDataContainer container = state.getWorld().getPersistentDataContainer();
+                        PersistentDataContainer container = state.getChunk().getPersistentDataContainer();
                         NamespacedKey NBTKey = new NamespacedKey(NamedBinaryTagHelper.getInstance(), key);
                         if (container.has(NBTKey, PersistentDataType.STRING)) {
                             String value = container.get(NBTKey, PersistentDataType.STRING);
@@ -54,7 +54,7 @@ public class Commands implements CommandExecutor, TabCompleter {
                         }
                         String value = valueBuilder.toString();
                         BlockState state = block.getState();
-                        PersistentDataContainer container = state.getWorld().getPersistentDataContainer();
+                        PersistentDataContainer container = state.getChunk().getPersistentDataContainer();
                         NamespacedKey NBTKey = new NamespacedKey(NamedBinaryTagHelper.getInstance(), key);
                         container.set(NBTKey, PersistentDataType.STRING, value);
                         state.update();
